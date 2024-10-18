@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error - Something Went Wrong</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f9fa;
+      }
+      .error-container {
+        text-align: center;
+        max-width: 600px;
+        margin: auto;
+      }
+      .error-code {
+        font-size: 6rem;
+        font-weight: 700;
+        color: #dc3545;
+      }
+      .error-message {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="error-container">
+        <div class="error-code">Oops!</div>
+        <h1 class="display-4">An Error Occurred</h1>
+        <p class="error-message">
+          <%= message || 'Something went wrong. Please try again later.' %>
+        </p>
+        <p class="text-muted">
+          Error Code: <strong><%= status || 500 %></strong>
+        </p>
+        <a href="/profile" class="btn btn-primary mt-4">Go Back Home</a>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
